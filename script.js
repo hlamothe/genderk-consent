@@ -218,13 +218,13 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
 
       try {
+        // Use text/plain to avoid CORS preflight — Apps Script still receives the JSON body
         const response = await fetch(GOOGLE_SCRIPT_URL, {
           method: 'POST',
-          mode: 'no-cors', // Apps Script requires no-cors from browser
-          headers: { 'Content-Type': 'application/json' },
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain' },
           body: JSON.stringify(data)
         });
-        // no-cors means we can't read the response, but if fetch didn't throw, it was sent
         sheetSuccess = true;
       } catch (err) {
         console.warn('Could not submit to Google Sheets:', err);
