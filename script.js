@@ -238,25 +238,11 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }
 
-    // Also download as JSON backup
-    downloadJSON(data);
-
     // Show success
     showSuccess(data, sheetSuccess);
   });
 
-  function downloadJSON(data) {
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    const safeName = data.childName.replace(/[^a-zA-Z0-9]/g, '_');
-    a.download = `consent_${safeName}_${data.parentDate}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  }
+
 
   function showSuccess(data, sheetSuccess) {
     form.hidden = true;
