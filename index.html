@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parental Consent — GenderK Study | MIT</title>
+  <meta name="description" content="Online parental consent form for participation in the GenderK non-biomedical research study at MIT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="form-header">
+      <div class="header-inner">
+        <div class="mit-branding">
+          <svg class="mit-logo" viewBox="0 0 60 30" width="60" height="30" aria-label="MIT Logo">
+            <rect x="0" y="0" width="8" height="30" fill="currentColor"/>
+            <rect x="12" y="0" width="8" height="30" fill="currentColor"/>
+            <rect x="12" y="0" width="20" height="8" fill="currentColor"/>
+            <rect x="36" y="0" width="8" height="8" fill="currentColor"/>
+            <rect x="36" y="12" width="8" height="18" fill="currentColor"/>
+          </svg>
+          <div class="branding-text">
+            <span class="dept-name">Department of Brain and Cognitive Sciences</span>
+          </div>
+        </div>
+        <div class="protocol-badge">
+          <span class="badge-label">IRB Protocol</span>
+          <span class="badge-number">#1803267891</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main form -->
+    <main class="form-container">
+      <div class="form-title-block">
+        <h1>Consent to Participate in Non-Biomedical Research</h1>
+        <p class="subtitle">Parental / Legal Guardian Consent Form</p>
+      </div>
+
+      <form id="consent-form" novalidate>
+        <!-- Section 1: Study Information -->
+        <section class="form-section" id="section-info">
+          <div class="section-header">
+            <span class="section-number">1</span>
+            <h2>Study Information</h2>
+          </div>
+
+          <div class="info-card">
+            <h3>Participation and Withdrawal</h3>
+            <p>Your child's participation in this study is completely voluntary and you are free to choose whether or not he or she should participate. If you choose to allow your child's participation, you may subsequently withdraw your child from it at any time without penalty or consequences of any kind. The investigator may also withdraw your child if circumstances arise that warrant doing so. You may remain with your child throughout the entire session.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Emergency Care and Compensation for Injury</h3>
+            <p>If you feel you or your child has suffered an injury, which may include emotional trauma, as a result of participating in this study, please contact the person in charge of the study as soon as possible. In the event you suffer such an injury, M.I.T. may provide itself, or arrange for the provision of, emergency transport or medical treatment, including emergency treatment and follow-up care, as needed, or reimbursement for such medical services. M.I.T. does not provide any other form of compensation for injury. In any case, neither the offer to provide medical assistance, nor the actual provision of medical services shall be considered an admission of fault or acceptance of liability. Questions regarding this policy may be directed to MIT's Insurance Office, (617) 253-2823. Your insurance carrier may be billed for the cost of emergency transport or medical treatment, if such services are determined not to be directly related to your participation in this study.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Identification of Investigators</h3>
+            <p>If you or your child have any questions or concerns about the research, please feel free to contact:</p>
+            <div class="investigator-contact">
+              <strong>Assistant Professor Laura Schulz</strong><br>
+              <a href="mailto:lschulz@mit.edu">lschulz@mit.edu</a> · (617) 253-7957<br>
+              MIT Department of Brain and Cognitive Sciences, 46-4011<br>
+              77 Massachusetts Avenue, Cambridge, MA 02139
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Child Information -->
+        <section class="form-section" id="section-child">
+          <div class="section-header">
+            <span class="section-number">2</span>
+            <h2>Child Information</h2>
+          </div>
+
+          <p class="section-description">I understand the information described in this brochure. My questions have been answered to my satisfaction, and I agree to let my child participate in this study. I have been given a copy of this form.</p>
+
+          <div class="field-grid">
+            <div class="field-group field-wide">
+              <label for="child-name">Name of Child</label>
+              <input type="text" id="child-name" name="childName" required placeholder="Full name of child" autocomplete="off">
+              <span class="field-error" id="child-name-error">Please enter the child's name</span>
+            </div>
+
+            <div class="field-group">
+              <label for="child-dob">Date of Birth</label>
+              <input type="date" id="child-dob" name="childDOB" required>
+              <span class="field-error" id="child-dob-error">Please enter the child's date of birth</span>
+            </div>
+
+            <div class="field-group">
+              <label for="child-gender">Gender</label>
+              <select id="child-gender" name="childGender" required>
+                <option value="" disabled selected>Select…</option>
+                <option value="Girl">Girl</option>
+                <option value="Boy">Boy</option>
+                <option value="Other">Other</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+              </select>
+              <span class="field-error" id="child-gender-error">Please select a gender option</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Parent / Legal Representative -->
+        <section class="form-section" id="section-parent">
+          <div class="section-header">
+            <span class="section-number">3</span>
+            <h2>Parent / Legal Guardian</h2>
+          </div>
+
+          <div class="field-grid">
+            <div class="field-group field-wide">
+              <label for="parent-name">Name of Legal Representative (Parent)</label>
+              <input type="text" id="parent-name" name="parentName" required placeholder="Full name" autocomplete="name">
+              <span class="field-error" id="parent-name-error">Please enter your name</span>
+            </div>
+
+            <div class="field-group">
+              <label for="parent-date">Today's Date</label>
+              <input type="date" id="parent-date" name="parentDate" required>
+              <span class="field-error" id="parent-date-error">Please enter today's date</span>
+            </div>
+          </div>
+
+          <!-- Signature -->
+          <div class="field-group field-wide">
+            <label>Signature of Legal Representative (Parent)</label>
+            <div class="signature-pad-container">
+              <canvas id="signature-pad" width="600" height="160"></canvas>
+              <button type="button" class="sig-clear-btn" id="clear-signature" aria-label="Clear signature">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M5.333 4V2.667a1.333 1.333 0 011.334-1.334h2.666a1.333 1.333 0 011.334 1.334V4m2 0v9.333a1.333 1.333 0 01-1.334 1.334H4.667a1.333 1.333 0 01-1.334-1.334V4h9.334z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Clear
+              </button>
+            </div>
+            <span class="field-error" id="signature-error">Please provide your signature</span>
+          </div>
+        </section>
+
+        <!-- Section 4: Video Consent -->
+        <section class="form-section" id="section-video">
+          <div class="section-header">
+            <span class="section-number">4</span>
+            <h2>Video Consent</h2>
+          </div>
+
+          <p class="section-description"><strong>Please use your initials for the following statements below.</strong><br>I consent to the use of parts or all of this video clip for:</p>
+
+          <div class="video-consent-grid">
+            <div class="consent-option">
+              <div class="consent-option-content">
+                <div class="consent-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 15V17M6 21H18A2 2 0 0020 19V13A2 2 0 0018 11H6A2 2 0 004 13V19A2 2 0 006 21ZM16 11V7A4 4 0 008 7V11H16Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <label for="video-private" class="consent-label">Private use only</label>
+                  <p class="consent-desc">Video only shared with experimenters on this project</p>
+                </div>
+              </div>
+              <input type="text" id="video-private" name="videoPrivate" class="initials-input" placeholder="Initials" maxlength="4">
+            </div>
+
+            <div class="consent-option">
+              <div class="consent-option-content">
+                <div class="consent-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <label for="video-scientific" class="consent-label">Scientific and educational use</label>
+                  <p class="consent-desc">E.g. scientific conferences or talks, scientific papers, teaching in academic settings</p>
+                </div>
+              </div>
+              <input type="text" id="video-scientific" name="videoScientific" class="initials-input" placeholder="Initials" maxlength="4">
+            </div>
+
+            <div class="consent-option">
+              <div class="consent-option-content">
+                <div class="consent-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5a17.92 17.92 0 01-8.716-2.247m0 0A8.966 8.966 0 003 12c0-1.97.633-3.792 1.708-5.274" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <label for="video-public" class="consent-label">Public education and outreach</label>
+                  <p class="consent-desc">E.g. lab website or news article, public talks</p>
+                </div>
+              </div>
+              <input type="text" id="video-public" name="videoPublic" class="initials-input" placeholder="Initials" maxlength="4">
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 5: Consent Confirmation -->
+        <section class="form-section" id="section-confirm">
+          <div class="section-header">
+            <span class="section-number">5</span>
+            <h2>Consent Confirmation</h2>
+          </div>
+
+          <div class="consent-checkbox-group">
+            <label class="checkbox-label" for="agree-consent">
+              <input type="checkbox" id="agree-consent" name="agreeConsent" required>
+              <span class="checkbox-custom"></span>
+              <span>I understand the information described in this brochure. My questions have been answered to my satisfaction, and <strong>I agree to let my child participate in this study</strong>. I have been given a copy of this form.</span>
+            </label>
+            <span class="field-error" id="agree-consent-error">You must agree to participate</span>
+          </div>
+        </section>
+
+        <!-- Investigator Section (informational) -->
+        <section class="form-section investigator-section" id="section-investigator">
+          <div class="section-header">
+            <span class="section-number-alt">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 1L12.39 6.26L18.18 7.27L14.09 11.73L14.82 17.64L10 14.9L5.18 17.64L5.91 11.73L1.82 7.27L7.61 6.26L10 1Z" fill="currentColor"/></svg>
+            </span>
+            <h2>For the Investigator</h2>
+          </div>
+          <p class="investigator-note">In my judgment, the subject is voluntarily and knowingly giving informed consent and possesses the legal capacity to give informed consent to participate in this research study.</p>
+          <p class="investigator-note muted">This section is to be completed by the investigator at the time of the session.</p>
+        </section>
+
+        <!-- Actions -->
+        <div class="form-actions">
+          <button type="submit" class="btn-primary" id="submit-btn">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Submit Consent
+          </button>
+          <button type="button" class="btn-secondary" id="print-btn">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5V1.667h10V7.5M5 15H3.333A1.667 1.667 0 011.667 13.333v-3.666A1.667 1.667 0 013.333 8h13.334a1.667 1.667 0 011.666 1.667v3.666A1.667 1.667 0 0116.667 15H15m-10 0h10v3.333H5V15z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Print / Save PDF
+          </button>
+        </div>
+      </form>
+
+      <!-- Success State -->
+      <div id="success-message" class="success-container" hidden>
+        <div class="success-icon-wrap">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="30" stroke="#22c55e" stroke-width="3"/>
+            <path d="M20 33l8 8 16-16" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2>Consent Submitted Successfully</h2>
+        <p>Thank you for providing your consent. A copy of this form has been saved. You may print this page for your records.</p>
+        <div class="success-summary" id="success-summary"></div>
+        <button type="button" class="btn-secondary" id="print-success-btn">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5V1.667h10V7.5M5 15H3.333A1.667 1.667 0 011.667 13.333v-3.666A1.667 1.667 0 013.333 8h13.334a1.667 1.667 0 011.666 1.667v3.666A1.667 1.667 0 0116.667 15H15m-10 0h10v3.333H5V15z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Print / Save PDF
+        </button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="form-footer">
+      <div class="footer-inner">
+        <p class="irb-stamp">APPROVED 03/15/2018 · MIT IRB PROTOCOL #1803267891 · EXPIRES ON 03/11/2025</p>
+        <p class="footer-note">Massachusetts Institute of Technology · Cambridge, MA 02139</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
