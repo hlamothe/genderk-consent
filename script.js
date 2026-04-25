@@ -154,6 +154,17 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!firstError) firstError = canvas;
     }
 
+    // Video consent — at least one must have initials
+    const videoPrivate = document.getElementById('video-private');
+    const videoScientific = document.getElementById('video-scientific');
+    const videoPublic = document.getElementById('video-public');
+    if (!videoPrivate.value.trim() && !videoScientific.value.trim() && !videoPublic.value.trim()) {
+      const videoSection = document.getElementById('section-video');
+      if (videoSection) videoSection.classList.add('has-error');
+      valid = false;
+      if (!firstError) firstError = videoPrivate;
+    }
+
     // Consent checkbox
     const agreeCheckbox = document.getElementById('agree-consent');
     if (!agreeCheckbox.checked) {
@@ -293,6 +304,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const group = e.target.closest('.field-group') || e.target.closest('.consent-checkbox-group');
     if (group) group.classList.remove('has-error');
     e.target.classList.remove('has-error');
+    // Clear video consent section error when typing initials
+    const videoSection = e.target.closest('#section-video');
+    if (videoSection) videoSection.classList.remove('has-error');
   });
 
   form.addEventListener('change', (e) => {

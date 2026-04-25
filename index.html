@@ -16,13 +16,7 @@
     <header class="form-header">
       <div class="header-inner">
         <div class="mit-branding">
-          <svg class="mit-logo" viewBox="0 0 60 30" width="60" height="30" aria-label="MIT Logo">
-            <rect x="0" y="0" width="8" height="30" fill="currentColor"/>
-            <rect x="12" y="0" width="8" height="30" fill="currentColor"/>
-            <rect x="12" y="0" width="20" height="8" fill="currentColor"/>
-            <rect x="36" y="0" width="8" height="8" fill="currentColor"/>
-            <rect x="36" y="12" width="8" height="18" fill="currentColor"/>
-          </svg>
+          <img src="mit-logo.svg" alt="MIT Logo" class="mit-logo" width="72" height="38">
           <div class="branding-text">
             <span class="dept-name">Department of Brain and Cognitive Sciences</span>
           </div>
@@ -52,22 +46,6 @@
           <div class="info-card">
             <h3>Participation and Withdrawal</h3>
             <p>Your child's participation in this study is completely voluntary and you are free to choose whether or not he or she should participate. If you choose to allow your child's participation, you may subsequently withdraw your child from it at any time without penalty or consequences of any kind. The investigator may also withdraw your child if circumstances arise that warrant doing so. You may remain with your child throughout the entire session.</p>
-          </div>
-
-          <div class="info-card">
-            <h3>Emergency Care and Compensation for Injury</h3>
-            <p>If you feel you or your child has suffered an injury, which may include emotional trauma, as a result of participating in this study, please contact the person in charge of the study as soon as possible. In the event you suffer such an injury, M.I.T. may provide itself, or arrange for the provision of, emergency transport or medical treatment, including emergency treatment and follow-up care, as needed, or reimbursement for such medical services. M.I.T. does not provide any other form of compensation for injury. In any case, neither the offer to provide medical assistance, nor the actual provision of medical services shall be considered an admission of fault or acceptance of liability. Questions regarding this policy may be directed to MIT's Insurance Office, (617) 253-2823. Your insurance carrier may be billed for the cost of emergency transport or medical treatment, if such services are determined not to be directly related to your participation in this study.</p>
-          </div>
-
-          <div class="info-card">
-            <h3>Identification of Investigators</h3>
-            <p>If you or your child have any questions or concerns about the research, please feel free to contact:</p>
-            <div class="investigator-contact">
-              <strong>Assistant Professor Laura Schulz</strong><br>
-              <a href="mailto:lschulz@mit.edu">lschulz@mit.edu</a> · (617) 253-7957<br>
-              MIT Department of Brain and Cognitive Sciences, 46-4011<br>
-              77 Massachusetts Avenue, Cambridge, MA 02139
-            </div>
           </div>
         </section>
 
@@ -149,7 +127,7 @@
             <h2>Video Consent</h2>
           </div>
 
-          <p class="section-description"><strong>Please use your initials for the following statements below.</strong><br>I consent to the use of parts or all of this video clip for:</p>
+          <p class="section-description"><strong>Please use your initials for at least one of the following statements below.</strong><br>I consent to the use of parts or all of this video clip for:</p>
 
           <div class="video-consent-grid">
             <div class="consent-option">
@@ -191,6 +169,7 @@
               <input type="text" id="video-public" name="videoPublic" class="initials-input" placeholder="Initials" maxlength="4">
             </div>
           </div>
+          <span class="field-error" id="video-consent-error">Please initial at least one video consent option</span>
         </section>
 
         <!-- Section 5: Consent Confirmation -->
@@ -220,6 +199,32 @@
           </div>
           <p class="investigator-note">In my judgment, the subject is voluntarily and knowingly giving informed consent and possesses the legal capacity to give informed consent to participate in this research study.</p>
           <p class="investigator-note muted">This section is to be completed by the investigator at the time of the session.</p>
+        </section>
+
+        <!-- Additional Information -->
+        <section class="form-section" id="section-additional">
+          <div class="section-header">
+            <span class="section-number-alt">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM10 7v2m0 4h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h2>Additional Information</h2>
+          </div>
+
+          <div class="info-card">
+            <h3>Emergency Care and Compensation for Injury</h3>
+            <p>If you feel you or your child has suffered an injury, which may include emotional trauma, as a result of participating in this study, please contact the person in charge of the study as soon as possible. In the event you suffer such an injury, M.I.T. may provide itself, or arrange for the provision of, emergency transport or medical treatment, including emergency treatment and follow-up care, as needed, or reimbursement for such medical services. M.I.T. does not provide any other form of compensation for injury. In any case, neither the offer to provide medical assistance, nor the actual provision of medical services shall be considered an admission of fault or acceptance of liability. Questions regarding this policy may be directed to MIT's Insurance Office, (617) 253-2823. Your insurance carrier may be billed for the cost of emergency transport or medical treatment, if such services are determined not to be directly related to your participation in this study.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Identification of Investigators</h3>
+            <p>If you or your child have any questions or concerns about the research, please feel free to contact:</p>
+            <div class="investigator-contact">
+              <strong>Assistant Professor Laura Schulz</strong><br>
+              <a href="mailto:lschulz@mit.edu">lschulz@mit.edu</a> · (617) 253-7957<br>
+              MIT Department of Brain and Cognitive Sciences, 46-4011<br>
+              77 Massachusetts Avenue, Cambridge, MA 02139
+            </div>
+          </div>
         </section>
 
         <!-- Actions -->
