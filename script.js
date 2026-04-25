@@ -295,9 +295,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return div.innerHTML;
   }
 
-  // ---- Print ----
-  document.getElementById('print-btn').addEventListener('click', () => window.print());
-  document.getElementById('print-success-btn').addEventListener('click', () => window.print());
 
   // ---- Clear field errors on input ----
   form.addEventListener('input', (e) => {
